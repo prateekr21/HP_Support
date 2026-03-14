@@ -1,0 +1,15 @@
+==============================================================================
+Suites
+==============================================================================
+Suites.TC 01 HP
+==============================================================================
+Verify HP support homepage loads                                      | FAIL |
+Element with locator 'xpath://button[@id='onetrust-accept-btn-handler']' not found.
+------------------------------------------------------------------------------
+Suites.TC 01 HP                                                       | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  c:\Users\hpx\Desktop\HP Support\TestCases\Results\pabot_results\0\output.xml

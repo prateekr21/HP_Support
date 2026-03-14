@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.9 on win32)" generated="2026-03-14T02:57:08.877709" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="TC 02 Header" source="c:\Users\hpx\Desktop\HP Support\TestCases\TC_02_Header.robot">
+<kw name="Open Browser and HP support" owner="Homepage" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-14T02:57:09.361852" level="INFO">Opening browser 'headlessChrome' to base url 'https://support.hp.com/in-en'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-14T02:57:09.361584" elapsed="1.325876"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-14T02:57:10.687807" elapsed="0.029252"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2026-03-14T02:57:09.360536" elapsed="1.356675"/>
+</kw>
+<test id="s1-s1-t1" name="Verify header navigation options" line="9">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>4s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-03-14T02:57:10.717904" elapsed="0.001269"/>
+</kw>
+<kw name="Click Accept Cookies" owner="Homepage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-14T02:57:10.720081" level="INFO">Clicking element 'xpath://button[@id='onetrust-accept-btn-handler']'.</msg>
+<msg time="2026-03-14T02:57:14.824902" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-03-14T02:57:14.825329" level="FAIL">Element with locator 'xpath://button[@id='onetrust-accept-btn-handler']' not found.</msg>
+<arg>xpath://button[@id='onetrust-accept-btn-handler']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-03-14T02:57:10.719735" elapsed="4.112134">Element with locator 'xpath://button[@id='onetrust-accept-btn-handler']' not found.</status>
+</kw>
+<status status="FAIL" start="2026-03-14T02:57:10.719423" elapsed="4.112873">Element with locator 'xpath://button[@id='onetrust-accept-btn-handler']' not found.</status>
+</kw>
+<kw name="Verfiy Home Page Elements" owner="Homepage">
+<status status="NOT RUN" start="2026-03-14T02:57:14.833229" elapsed="0.000098"/>
+</kw>
+<status status="FAIL" start="2026-03-14T02:57:10.717319" elapsed="4.116345">Element with locator 'xpath://button[@id='onetrust-accept-btn-handler']' not found.</status>
+</test>
+<kw name="Close Browser" owner="Homepage" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-03-14T02:57:14.835073" elapsed="2.327240"/>
+</kw>
+<status status="PASS" start="2026-03-14T02:57:14.834643" elapsed="2.327925"/>
+</kw>
+<status status="FAIL" start="2026-03-14T02:57:08.939114" elapsed="8.223548"/>
+</suite>
+<status status="FAIL" start="2026-03-14T02:57:08.880342" elapsed="8.283555"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Suites" id="s1" pass="0" fail="1" skip="0">Suites</stat>
+<stat name="TC 02 Header" id="s1-s1" pass="0" fail="1" skip="0">Suites.TC 02 Header</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

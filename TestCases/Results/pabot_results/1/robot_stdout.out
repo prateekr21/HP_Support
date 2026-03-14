@@ -1,0 +1,15 @@
+==============================================================================
+Suites
+==============================================================================
+Suites.TC 02 Header
+==============================================================================
+Verify header navigation options                                      | FAIL |
+Element with locator 'xpath://button[@id='onetrust-accept-btn-handler']' not found.
+------------------------------------------------------------------------------
+Suites.TC 02 Header                                                   | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  c:\Users\hpx\Desktop\HP Support\TestCases\Results\pabot_results\1\output.xml

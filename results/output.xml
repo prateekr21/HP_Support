@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.9 on win32)" generated="2026-03-13T20:33:51.646260" rpa="false" schemaversion="5">
+<suite id="s1" name="HP Support" source="C:\Users\hpx\Desktop\HP Support">
+<suite id="s1-s1" name="TestCases" source="C:\Users\hpx\Desktop\HP Support\TestCases">
+<suite id="s1-s1-s1" name="TC 02 Header" source="C:\Users\hpx\Desktop\HP Support\TestCases\TC_02_Header.robot">
+<kw name="Open Browser and HP support" owner="Homepage" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-13T20:33:52.168181" level="INFO">Opening browser 'Chrome' to base url 'https://support.hp.com/in-en'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-13T20:33:52.167487" elapsed="5.085420"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-13T20:33:57.253624" elapsed="0.060337"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2026-03-13T20:33:52.166231" elapsed="5.148032"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Verify header navigation options" line="9">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>4s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-03-13T20:33:57.320266" elapsed="0.001915"/>
+</kw>
+<kw name="Click Accept Cookies" owner="Homepage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-13T20:33:57.324647" level="INFO">Clicking element 'xpath://button[@id='onetrust-accept-btn-handler']'.</msg>
+<arg>xpath://button[@id='onetrust-accept-btn-handler']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-13T20:33:57.323718" elapsed="1.108269"/>
+</kw>
+<status status="PASS" start="2026-03-13T20:33:57.322821" elapsed="1.109460"/>
+</kw>
+<kw name="Verfiy Home Page Elements" owner="Homepage">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-13T20:33:58.458831" level="INFO">Current page contains text 'Welcome to HP Customer Support'.</msg>
+<arg>Welcome to HP Customer Support</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-13T20:33:58.433697" elapsed="0.025459"/>
+</kw>
+<kw name="Page Should Contain Textfield" owner="SeleniumLibrary">
+<msg time="2026-03-13T20:33:58.488278" level="INFO">Current page contains text field 'xpath://input[@id='search_focus_desktop']'.</msg>
+<arg>${searchbar}</arg>
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<status status="PASS" start="2026-03-13T20:33:58.459463" elapsed="0.029095"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-03-13T20:33:58.504915" level="INFO">Current page contains element 'xpath://div[contains(@class,'wpr-logo-holder')]//a[contains(@title,'HP® India | Laptops, Computers, Desktops , Printers, and more')]'.</msg>
+<arg>${HPlogo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-03-13T20:33:58.488997" elapsed="0.016201"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-03-13T20:33:58.528522" level="INFO">Current page contains element 'xpath://h2[normalize-space()='Software and Drivers']'.</msg>
+<arg>${softwareAndDrivers}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-03-13T20:33:58.505569" elapsed="0.023299"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-03-13T20:33:58.542761" level="INFO">Current page contains element 'xpath://a[@id='sec-nav-support-home']'.</msg>
+<arg>${Supporthome}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-03-13T20:33:58.529189" elapsed="0.013872"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-03-13T20:33:58.556428" level="INFO">Current page contains element 'xpath://a[@id='sec-nav-products']'.</msg>
+<arg>${productSupport}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-03-13T20:33:58.543313" elapsed="0.013427"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-03-13T20:33:58.569855" level="INFO">Current page contains element 'xpath://a[@id='sec-nav-diag']'.</msg>
+<arg>${diagnostics}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-03-13T20:33:58.556998" elapsed="0.013129"/>
+</kw>
+<status status="PASS" start="2026-03-13T20:33:58.432943" elapsed="0.137373"/>
+</kw>
+<status status="PASS" start="2026-03-13T20:33:57.314434" elapsed="1.256377"/>
+</test>
+<kw name="Close Browser" owner="Homepage" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-03-13T20:33:58.576959" elapsed="2.238664"/>
+</kw>
+<status status="PASS" start="2026-03-13T20:33:58.576352" elapsed="2.239689"/>
+</kw>
+<status status="PASS" start="2026-03-13T20:33:51.724556" elapsed="9.091625"/>
+</suite>
+<status status="PASS" start="2026-03-13T20:33:51.710038" elapsed="9.112013"/>
+</suite>
+<status status="PASS" start="2026-03-13T20:33:51.653639" elapsed="9.171789"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="HP Support" id="s1" pass="1" fail="0" skip="0">HP Support</stat>
+<stat name="TestCases" id="s1-s1" pass="1" fail="0" skip="0">HP Support.TestCases</stat>
+<stat name="TC 02 Header" id="s1-s1-s1" pass="1" fail="0" skip="0">HP Support.TestCases.TC 02 Header</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
