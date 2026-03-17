@@ -11,7 +11,8 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat ' pip install -r requirements.txt
+                bat ' cd C:\ProgramData\Jenkins\.jenkins\workspace\HP_support 
+                pip install -r requirements.txt
                   pabot --processes 2 --outputdir Results *.robot'
             }
         }
