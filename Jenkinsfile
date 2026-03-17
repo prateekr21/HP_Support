@@ -11,8 +11,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'cd c:\Users\hpx\Desktop\HP Support\TestCases\
-pabot --processes 2 --outputdir Results *.robot'
+                bat 'pabot --processes 2 --outputdir Results *.robot'
             }
         }
 
