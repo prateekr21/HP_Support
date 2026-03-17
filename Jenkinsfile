@@ -11,9 +11,8 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'cd %WORKSPACE%
-pip install -r requirements.txt
-run.bat'
+                bat 'pip install -r requirements.txt
+                run.bat'
             }
         }
 
