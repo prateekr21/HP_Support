@@ -11,8 +11,8 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'pip install -r requirements.txt
-               pabot --processes 2 --outputdir Results *.robot'
+                bat ' pip install -r requirements.txt
+                  pabot --processes 2 --outputdir Results *.robot'
             }
         }
 
