@@ -3,21 +3,34 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
+        stage('Checkout Code') {
             steps {
-                echo 'build completed'
+                echo 'https://github.com/your-repo.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat '''
+                cd %WORKSPACE%
+                pip install -r requirements.txt
+                '''
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat ' cd %WORKSPACE%
-
-pip install -r requirements.txt
-
-run.bat'
+                bat '''
+                cd %WORKSPACE%
+                run.bat
+                '''
             }
         }
+    }
 
+    post {
+        always {
+            archiveArtifacts artifacts: 'Results/*', fingerprint: true
+        }
     }
 }
